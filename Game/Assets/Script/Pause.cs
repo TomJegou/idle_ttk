@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class Pause : MonoBehaviour
 {
@@ -16,6 +18,7 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
         isPaused = true;
+        Debug.Log(isPaused);
     }
 
     public void ResumeGame()
@@ -23,12 +26,20 @@ public class Pause : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         isPaused = false;
+        Debug.Log(isPaused);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        pauseMenu.SetActive(false);
+       if (isPaused)
+        {
+           PauseGame();
+        }
+        else
+        {
+           ResumeGame();
+        }
         
     }
 
@@ -37,6 +48,7 @@ public class Pause : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            Debug.Log(isPaused);
             if (isPaused)
             {
                 ResumeGame();
@@ -47,6 +59,8 @@ public class Pause : MonoBehaviour
             }
         }
     }
+
+   
 
 
 
