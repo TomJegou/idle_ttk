@@ -19,5 +19,6 @@ public class MainGame : MonoBehaviour
     }
     public void Click(){
         Debug.Log("Salut click click !");
+        scoreText.color = Color.red;
     }
 }
