@@ -12,7 +12,9 @@ public class Menu : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log ("qzd");
-        Application.Quit();
+            Debug.Log("qzd");
+        #if !UNITY_WEBGL
+            Application.Quit();
+        #endif
     }
 }
