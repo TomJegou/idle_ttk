@@ -4,13 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Score : MonoBehaviour
+public class MainGame : MonoBehaviour
 {
-    public TextMeshProUGUI textMeshPro;
+    public TextMeshProUGUI scoreText;
     // Start is called before the first frame update
     void Start()
     {
-        textMeshPro.color = Color.green;
     }
 
     // Update is called once per frame
@@ -18,7 +17,7 @@ public class Score : MonoBehaviour
     {
         
     }
-    public void Onclick() {
-        Debug.Log("Kyky trop bg > Tom Saillard");
+    public void Click(){
+        Debug.Log("Salut click click !");
     }
 }
