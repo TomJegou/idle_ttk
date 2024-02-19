@@ -7,9 +7,12 @@ using UnityEngine.UI;
 public class MainGame : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public int score = 0;
+    private string formatStringScore = "Your score: {0}";
     // Start is called before the first frame update
     void Start()
     {
+        scoreText.text = string.Format(formatStringScore, score);
     }
 
     // Update is called once per frame
@@ -18,7 +21,7 @@ public class MainGame : MonoBehaviour
         
     }
     public void Click(){
-        Debug.Log("Salut click click !");
-        scoreText.color = Color.red;
+        score++;
+        scoreText.text = string.Format(formatStringScore, score);
     }
 }
