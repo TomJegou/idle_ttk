@@ -7,17 +7,18 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public TextMeshProUGUI textMeshPro;
-    public 
     // Start is called before the first frame update
     void Start()
     {
         textMeshPro.color = Color.green;
-        textMeshPro.text = "fdsjfdsklfjds";
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void Onclick() {
+        Debug.Log("Kyky trop bg > Tom Saillard");
     }
 }
