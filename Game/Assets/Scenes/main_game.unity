@@ -645,7 +645,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1155487229}
   - component: {fileID: 1155487228}
-  - component: {fileID: 1155487230}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -856,7 +855,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 645078574}
   - {fileID: 1155487229}
   - {fileID: 771221573}
   - {fileID: 464338603}
