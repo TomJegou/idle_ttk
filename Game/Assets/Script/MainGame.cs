@@ -21,6 +21,7 @@ public class MainGame : MonoBehaviour
         if (score < 0)
         {
             scoreText.text = "Hacoeur{ch3at_engine_is_c00l}";
+            Debug.Log("Hacoeur{ch3at_engine_is_c00l}");
         }
     }
     public void Click(){
