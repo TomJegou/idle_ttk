@@ -18,7 +18,10 @@ public class MainGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (score < 0)
+        {
+            scoreText.text = "Hacoeur{ch3at_engine_is_c00l}";
+        }
     }
     public void Click(){
         score++;
