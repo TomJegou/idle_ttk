@@ -11,8 +11,7 @@ public class Pause : MonoBehaviour
 
     public bool isPaused;
 
-    public GameObject []Button;
-
+    public Button[] buttons; // Change GameObject[] to Button[]
 
     public void PauseGame()
     {
@@ -21,9 +20,9 @@ public class Pause : MonoBehaviour
         isPaused = true;
         Debug.Log(isPaused);
 
-        for (int i = 0; i < Button.Length; i++)
+        foreach (Button button in buttons)
         {
-            Button[i].SetActive(false);
+            button.interactable = false;
         }
        
     }
@@ -35,9 +34,9 @@ public class Pause : MonoBehaviour
         isPaused = false;
         Debug.Log(isPaused);
 
-        for (int i = 0; i < Button.Length; i++)
+        foreach (Button button in buttons)
         {
-            Button[i].SetActive(true);
+            button.interactable = true;
         }
     }
 

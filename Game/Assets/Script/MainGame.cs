@@ -9,7 +9,7 @@ public class MainGame : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int score = 0;
     private bool autoclick = false;
-    private bool boostClick = false;
+    // private bool boostClick = false;
     private string formatStringScore = "{0}";
     // Start is called before the first frame update
     void Start()
