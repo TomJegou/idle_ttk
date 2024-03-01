@@ -13,6 +13,9 @@ public class Pause : MonoBehaviour
 
     public Button[] buttons; // Change GameObject[] to Button[]
 
+
+    public GameObject commandCanvas;
+
     public void PauseGame()
     {
         pauseMenu.SetActive(true);
@@ -33,6 +36,7 @@ public class Pause : MonoBehaviour
         Time.timeScale = 1;
         isPaused = false;
         Debug.Log(isPaused);
+       commandCanvas.SetActive(false);
 
         foreach (Button button in buttons)
         {
@@ -52,12 +56,26 @@ public class Pause : MonoBehaviour
         }
     }
 
+
+    public void commandButton()
+    {
+        if (commandCanvas.activeSelf)
+        {
+            commandCanvas.SetActive(false);
+        }
+        else
+        {
+            commandCanvas.SetActive(true);
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
        ChangeStatusPaused();
         
     }
+
 
    
 
